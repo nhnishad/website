@@ -1,0 +1,276 @@
+{
+    "images": [
+       
+        {
+            "src_after": "smd/Flyer.webp",
+            "src_before": "smd/FlyerB.webp",
+            "alt_after": "Flyer after",
+            "alt_before": "Flyer before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/ah2.webp",
+            "src_before": "smd/ah2-b.webp",
+            "alt_after": "square after",
+            "alt_before": "square before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Biriyani.webp",
+            "src_before": "smd/Biriyani.webp",
+            "alt_after": "Biriyani after",
+            "alt_before": "Biriyani before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Burger.webp",
+            "src_before": "smd/Burger.webp",
+            "alt_after": "Burger after",
+            "alt_before": "Burger before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Tech3.webp",
+            "src_before": "smd/Tech3.webp",
+            "alt_after": "Tech3 after",
+            "alt_before": "Tech3 before",
+            "category": "square"
+        },
+
+        {
+            "src_after": "smd/001/10.webp",
+            "src_before": "smd/001/10.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/11.webp",
+            "src_before": "smd/001/11.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/12.webp",
+            "src_before": "smd/001/12.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/13.webp",
+            "src_before": "smd/001/13.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/14.webp",
+            "src_before": "smd/001/14.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/15.webp",
+            "src_before": "smd/001/15.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/16.webp",
+            "src_before": "smd/001/16.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/17.webp",
+            "src_before": "smd/001/17.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+
+
+
+        {
+            "src_after": "smd/Grilled-biriyani.webp",
+            "src_before": "smd/Grilled-biriyani.webp",
+            "alt_after": "Grilled-biriyani after",
+            "alt_before": "Grilled-biriyani before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Pasta.webp",
+            "src_before": "smd/Pasta.webp",
+            "alt_after": "Pasta after",
+            "alt_before": "Pasta before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Sajek.webp",
+            "src_before": "smd/Sajek.webp",
+            "alt_after": "Sajek after",
+            "alt_before": "Sajek before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Tech4.webp",
+            "src_before": "smd/Tech4.webp",
+            "alt_after": "Tech4 after",
+            "alt_before": "Tech4 before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Pizza2.webp",
+            "src_before": "smd/Pizza2.webp",
+            "alt_after": "Pizza2 after",
+            "alt_before": "Pizza2 before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Animal-day-poster-design.webp",
+            "src_before": "smd/Animal-day-poster-design.webp",
+            "alt_after": "Animal-day-poster-design after",
+            "alt_before": "Animal-day-poster-design before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Tech5.webp",
+            "src_before": "smd/Tech5.webp",
+            "alt_after": "Tech5 after",
+            "alt_before": "Tech5 before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Pizza1.webp",
+            "src_before": "smd/Pizza1.webp",
+            "alt_after": "Pizza1 after",
+            "alt_before": "Pizza1 before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Tech6.webp",
+            "src_before": "smd/Tech6.webp",
+            "alt_after": "Tech6 after",
+            "alt_before": "Tech6 before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/ah4.webp",
+            "src_before": "smd/ah4-b.webp",
+            "alt_after": "square after",
+            "alt_before": "square before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Food/Food_1.webp",
+            "src_before": "smd/Food/Food_b1.webp",
+            "alt_after": "square after",
+            "alt_before": "square before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Food/Food_2.webp",
+            "src_before": "smd/Food/Food_b2.webp",
+            "alt_after": "square after",
+            "alt_before": "square before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/6.webp",
+            "src_before": "smd/001/6.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/7.webp",
+            "src_before": "smd/001/7.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/8.webp",
+            "src_before": "smd/001/8.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/9.webp",
+            "src_before": "smd/001/9.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Food/Food_3.webp",
+            "src_before": "smd/Food/Food_b3.webp",
+            "alt_after": "square after",
+            "alt_before": "square before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Food/Food_4.webp",
+            "src_before": "smd/Food/Food_b4.webp",
+            "alt_after": "square after",
+            "alt_before": "square before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/Food/Food_5.webp",
+            "src_before": "smd/Food/Food_b5.webp",
+            "alt_after": "square after",
+            "alt_before": "square before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/ah9.webp",
+            "src_before": "smd/ah9-b.webp",
+            "alt_after": "square after",
+            "alt_before": "square before",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/1.webp",
+            "src_before": "smd/001/1.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/2.webp",
+            "src_before": "smd/001/2.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/3.webp",
+            "src_before": "smd/001/3.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/4.webp",
+            "src_before": "smd/001/4.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        },
+        {
+            "src_after": "smd/001/5.webp",
+            "src_before": "smd/001/5.webp",
+            "alt_after": "social media poster",
+            "alt_before": "social media poster",
+            "category": "square"
+        }
+
+    ]
+}

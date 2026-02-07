@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design • NH Nishad</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200..800&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&family=Pacifico&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e4ff00',
+                        bgMain: '#050505',
+                        cardBg: '#111111',
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        headline: ['Bricolage Grotesque', 'sans-serif'],
+                        serifItalic: ['DM Serif Display', 'serif'],
+                        mono: ['Space Grotesk', 'monospace'],
+                        cursive: ['Pacifico', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Hide scrollbars */
+        html { -ms-overflow-style: none; scrollbar-width: none; }
+        html::-webkit-scrollbar { display: none; }
+
+        /* Modern Trendy Grid Background */
+        body {
+            background-color: #050505;
+            /* Primary Dark Grid */
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px),
+                /* Large Accent Grid */
+                linear-gradient(to right, rgba(255,255,255,0.01) 2px, transparent 2px),
+                linear-gradient(to bottom, rgba(255,255,255,0.01) 2px, transparent 2px);
+            background-size: 40px 40px, 40px 40px, 200px 200px, 200px 200px;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        /* Ambient Mesh Glow for depth */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(228, 255, 0, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Liquid Glass Glow Animation */
+        @keyframes subtle-liquid-glow {
+            0%, 100% { border-color: rgba(228, 255, 0, 0.1); box-shadow: 0 0 10px rgba(228, 255, 0, 0.02); }
+            50% { border-color: rgba(228, 255, 0, 0.3); box-shadow: 0 0 20px rgba(228, 255, 0, 0.08); }
+        }
+
+        .glass {
+            background: rgba(17, 17, 17, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .liquid-glass-accent {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            animation: subtle-liquid-glow 6s infinite ease-in-out;
+        }
+
+        /* Sleek Liquid Glass Slider Track */
+        .glass-slider-track {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 6px;
+            border-radius: 100px;
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.05);
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+            outline: none;
+            z-index: 30;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 40px;
+            height: 10px;
+            background: linear-gradient(90deg, #e4ff00, #fff);
+            border-radius: 100px;
+            box-shadow: 0 0 15px rgba(228, 255, 0, 0.6);
+            cursor: ew-resize;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 40px;
+            height: 10px;
+            background: linear-gradient(90deg, #e4ff00, #fff);
+            border-radius: 100px;
+            box-shadow: 0 0 15px rgba(228, 255, 0, 0.6);
+            cursor: ew-resize;
+            border: none;
+        }
+
+        /* Comparison Logic */
+        .before { 
+            clip-path: inset(0 100% 0 0); 
+            transition: clip-path 0s linear; 
+            position: absolute; 
+            top: 0; left: 0; width: 100%; height: 100%; 
+            z-index: 10;
+            pointer-events: none;
+            will-change: clip-path;
+        }
+        .after { width: 100%; height: auto; display: block; }
+        
+        .slider-cue {
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 1.5px;
+            background: linear-gradient(to bottom, transparent, rgba(228, 255, 0, 0.8), transparent);
+            z-index: 15;
+            pointer-events: none;
+            box-shadow: 0 0 15px rgba(228, 255, 0, 0.3);
+            transition: opacity 0.3s ease;
+            will-change: left;
+            opacity: 0;
+        }
+
+        .gallery-item:hover .slider-cue,
+        .gallery-item:active .slider-cue {
+            opacity: 1;
+        }
+
+        .hamburger-line { transition: all 0.3s ease-in-out; }
+        .menu-open .line-1 { transform: translateY(5px) rotate(45deg); background-color: #fff !important; }
+        .menu-open .line-2 { transform: translateY(-5px) rotate(-45deg); background-color: #e4ff00 !important; }
+        
+        .filter-btn.active { background-color: white; color: black; border-color: white; }
+
+        .pulse-dot {
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 0.5; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+    </style>
+</head>
+
+<body class="text-white font-sans selection:bg-primary selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-[100] px-4 py-4 md:py-6">
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3 glass rounded-2xl md:rounded-full">
+            <a href="#" class="flex items-center">
+                <span class="font-headline text-xl tracking-tighter">NH<span class="text-primary">.</span></span>
+            </a>
+
+            <ul class="hidden md:flex items-center gap-8">
+                <li><a href="../index.html" class="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-primary transition-colors">Portfolio</a></li>
+                <li><a href="smd/index.html" class="text-[11px] font-bold uppercase tracking-[0.2em] text-primary transition-colors">Design</a></li>
+                <li><a href="../videoportfolio/index.html" class="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-primary transition-colors">Video</a></li>
+            </ul>
+
+            <div class="hidden md:block">
+                <a href="https://wa.me/+8801701446470" class="bg-primary text-black px-6 py-2.5 rounded-full text-[11px] font-extrabold uppercase tracking-wider hover:scale-105 transition-transform active:scale-95">
+                    Let's Talk
+                </a>
+            </div>
+
+            <button id="mobile-toggle" class="md:hidden flex flex-col gap-1.5 p-2">
+                <span class="hamburger-line line-1 w-6 h-0.5 bg-white"></span>
+                <span class="hamburger-line line-2 w-6 h-0.5 bg-primary"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-4 right-4 mt-2 glass rounded-2xl p-8 flex-col items-center gap-6 text-center">
+            <a href="https://nhnishad.online/" class="text-sm font-bold uppercase tracking-widest text-white">Home</a>
+            <a href="https://design.nhnishad.online" class="text-sm font-bold uppercase tracking-widest text-primary">Design</a>
+            <a href="https://edit.nhnishad.online/" class="text-sm font-bold uppercase tracking-widest text-white">Video</a>
+            <a href="https://wa.me/+8801701446470" class="w-full bg-primary text-black py-4 rounded-xl text-sm font-bold uppercase">Let's Talk</a>
+        </div>
+    </nav>
+
+    <!-- Hero / Intro -->
+    <section class="pt-28 md:pt-32 pb-6 px-6 max-w-6xl mx-auto">
+        <h1 class="font-headline text-4xl sm:text-5xl md:text-8xl uppercase tracking-tighter leading-[0.9] mb-8" data-aos="fade-up">
+            Visual <span class="text-primary italic font-serifItalic lowercase">storytelling</span><br>Redefined.
+        </h1>
+        
+        <!-- Filters -->
+        <div id="sub-buttons" class="flex flex-wrap gap-2 mt-8 md:mt-12" data-aos="fade-up" data-aos-delay="100">
+            <button id="thumbnail" class="filter-btn active px-4 md:px-6 py-2 rounded-full border border-white/10 text-[9px] md:text-[11px] uppercase font-bold tracking-widest transition-all">All</button>
+            <button id="documentary" class="filter-btn px-4 md:px-6 py-2 rounded-full border border-white/10 text-[9px] md:text-[11px] uppercase font-bold tracking-widest hover:border-primary transition-all">Documentary</button>
+            <button id="travel" class="filter-btn px-4 md:px-6 py-2 rounded-full border border-white/10 text-[9px] md:text-[11px] uppercase font-bold tracking-widest hover:border-primary transition-all">Travel</button>
+            <button id="informative" class="filter-btn px-4 md:px-6 py-2 rounded-full border border-white/10 text-[9px] md:text-[11px] uppercase font-bold tracking-widest hover:border-primary transition-all">Informative</button>
+            <button id="others" class="filter-btn px-4 md:px-6 py-2 rounded-full border border-white/10 text-[9px] md:text-[11px] uppercase font-bold tracking-widest hover:border-primary transition-all">Others</button>
+        </div>
+
+        <div class="mt-8 flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-4" data-aos="fade-up" data-aos-delay="150">
+            <button id="SocliaMedia" class="inline-flex items-center w-max gap-3 bg-white/5 border border-white/10 hover:bg-white/10 text-white rounded-full py-2 px-5 transition-all duration-300 group">
+                <span class="w-2 h-2 bg-primary rounded-full pulse-dot"></span>
+                <span class="text-[10px] md:text-[11px] font-bold uppercase tracking-widest">Social Media Poster</span>
+                <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                    <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z" fill="currentColor"></path>
+                </svg>
+            </button>
+
+            <!-- Interaction Guide -->
+            <div class="flex items-center gap-3 px-5 py-2.5 rounded-full liquid-glass-accent w-max">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+                <span class="font-mono text-[9px] uppercase tracking-[0.2em] text-gray-300">Tap or Slide For Before After</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <main class="px-4 md:px-10 pb-20 max-w-[1600px] mx-auto">
+        <div class="gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
+            <!-- Items injected here -->
+        </div>
+        <div id="loading" class="text-center py-10 text-gray-500 font-mono uppercase text-[10px] tracking-widest">
+            Scanning archives...
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-transparent border-t border-white/5 pt-20 pb-10 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-12 mb-20">
+                <div class="max-w-xl">
+                    <h2 class="font-headline text-4xl md:text-6xl uppercase tracking-tighter leading-none mb-6">
+                        Ready to start a <span class="text-primary font-serifItalic italic lowercase">project?</span>
+                    </h2>
+                    <a href="https://wa.me/+8801701446470" class="inline-flex items-center gap-4 group">
+                        <span class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-black transition-transform group-hover:scale-110">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.14l-.694 2.148 2.219-.641c.844.475 1.769.761 3.218.761 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.768-5.768-5.768zm3.42 8.161c-.146.411-.734.752-1.018.795-.279.043-.637.069-1.027-.056-.251-.081-.568-.201-.971-.375-1.716-.739-2.834-2.484-2.92-2.597-.086-.113-.701-.933-.701-1.78s.443-1.264.601-1.436c.158-.171.344-.215.459-.215s.229.001.329.006c.107.005.251-.041.394.305.146.353.498 1.218.541 1.304.043.086.072.186.014.301-.057.115-.086.186-.171.287-.086.1-.182.224-.261.3-.082.079-.168.165-.072.33.096.165.426.702.914 1.137.629.56 1.157.734 1.329.819.172.086.272.071.373-.043.101-.114.429-.501.544-.672.115-.172.229-.143.387-.086.158.057 1 .472 1.171.558s.287.129.33.201c.043.072.043.415-.103.826z"/></svg>
+                        </span>
+                        <span class="font-mono text-[12px] uppercase tracking-[0.2em] text-gray-400 group-hover:text-primary transition-colors">WhatsApp Me</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-3 bg-white/5 border border-white/10 px-5 py-2.5 rounded-full">
+                    <span class="w-2 h-2 bg-primary rounded-full pulse-dot"></span>
+                    <span class="font-mono text-[10px] uppercase tracking-widest text-gray-400">Available for new projects</span>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5">
+                <p class="font-mono text-[9px] uppercase tracking-[0.3em] text-gray-600">&copy; 2024 NH Nishad. Visual Artist.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="font-mono text-[9px] uppercase tracking-[0.3em] text-gray-600 hover:text-white transition-colors">Instagram</a>
+                    <a href="#" class="font-mono text-[9px] uppercase tracking-[0.3em] text-gray-600 hover:text-white transition-colors">Behance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div id="floating-cta" class="fixed bottom-8 right-8 z-[90] translate-y-20 opacity-0 transition-all duration-500">
+        <a href="https://wa.me/+8801701446470" class="glass pl-5 pr-6 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-transform border-primary/20">
+            <span class="w-2 h-2 bg-primary rounded-full pulse-dot"></span>
+            <span class="text-primary text-[10px] font-bold uppercase tracking-widest">Hire Me</span>
+        </a>
+    </div>
+
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const nav = document.querySelector('nav');
+
+        mobileToggle.addEventListener('click', () => {
+            nav.classList.toggle('menu-open');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        const floatingCta = document.getElementById('floating-cta');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                floatingCta.classList.remove('translate-y-20', 'opacity-0');
+            } else {
+                floatingCta.classList.add('translate-y-20', 'opacity-0');
+            }
+        });
+
+        const gallery = document.querySelector('.gallery');
+        const loading = document.getElementById('loading');
+        let page = 1;
+        const limit = 15;
+        let isFetching = false;
+        let noMoreImages = false;
+        let currentFilter = 'thumbnail';
+
+        document.getElementById('SocliaMedia').addEventListener('click', () => window.open('../smd', '_self'));
+
+        const applySubFilter = (filter) => {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.toggle('active', btn.id === filter));
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.style.display = (filter === 'thumbnail' || item.classList.contains(filter)) ? 'block' : 'none';
+            });
+            AOS.refresh();
+        };
+
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => applySubFilter(button.id));
+        });
+
+        const fetchImages = () => {
+            if (isFetching || noMoreImages) return;
+            isFetching = true;
+            loading.style.display = 'block';
+
+            fetch('images.json')
+                .then(res => res.json())
+                .then(data => {
+                    const images = data.images.slice((page - 1) * limit, page * limit);
+                    if (images.length === 0) {
+                        loading.innerText = "End of Archive";
+                        noMoreImages = true;
+                        isFetching = false;
+                        return;
+                    }
+                    images.forEach(imgData => gallery.appendChild(createGalleryItem(imgData)));
+                    if (currentFilter !== 'thumbnail') applySubFilter(currentFilter);
+                    page++;
+                    isFetching = false;
+                    loading.style.display = 'none';
+                    AOS.refresh();
+                })
+                .catch(err => {
+                    console.error('Error:', err);
+                    loading.innerText = "Connection Lost";
+                    isFetching = false;
+                });
+        };
+
+        function createGalleryItem(data) {
+            const div = document.createElement('div');
+            div.className = `gallery-item group relative bg-cardBg rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 ${data.category}`;
+            div.setAttribute('data-aos', 'fade-up');
+
+            div.innerHTML = `
+                <div class="aspect-video relative overflow-hidden bg-white/5 cursor-ew-resize touch-none">
+                    <img src="${data.src_after}" alt="${data.alt_after}" class="after pointer-events-none">
+                    <div class="before pointer-events-none">
+                        <img src="${data.src_before}" alt="${data.alt_before}" class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="slider-cue" style="left: 0%"></div>
+
+                    <div class="absolute bottom-[20px] md:bottom-[24px] left-1/2 -translate-x-1/2 w-4/5 h-[6px] glass-slider-track z-20 pointer-events-none shadow-2xl"></div>
+                    
+                    <input type="range" min="0" max="100" value="0" class="slider absolute bottom-[20px] md:bottom-[24px] left-1/2 -translate-x-1/2 w-4/5 h-[6px] z-40">
+                </div>
+            `;
+
+            const slider = div.querySelector('.slider');
+            const beforeImg = div.querySelector('.before');
+            const cue = div.querySelector('.slider-cue');
+            const container = div.querySelector('.aspect-video');
+
+            const updateComparison = (val) => {
+                beforeImg.style.clipPath = `inset(0 ${100 - val}% 0 0)`;
+                cue.style.left = `${val}%`;
+            };
+
+            const handleMove = (clientX) => {
+                const rect = container.getBoundingClientRect();
+                const x = clientX - rect.left;
+                const percent = Math.max(0, Math.min(100, (x / rect.width) * 100));
+                
+                // Set transition to 0 for instant tracking during movement
+                beforeImg.style.transition = 'none';
+                cue.style.transition = 'none';
+                
+                slider.value = percent;
+                updateComparison(percent);
+            };
+
+            slider.addEventListener('input', (e) => {
+                beforeImg.style.transition = 'none';
+                cue.style.transition = 'none';
+                updateComparison(e.target.value);
+            });
+
+            container.addEventListener('mousemove', (e) => handleMove(e.clientX));
+            container.addEventListener('touchmove', (e) => {
+                handleMove(e.touches[0].clientX);
+            }, { passive: true });
+
+            const resetSlider = () => {
+                beforeImg.style.transition = 'clip-path 0.5s cubic-bezier(0.19, 1, 0.22, 1)';
+                cue.style.transition = 'left 0.5s cubic-bezier(0.19, 1, 0.22, 1)';
+                slider.value = 0;
+                updateComparison(0);
+            };
+
+            container.addEventListener('mouseleave', resetSlider);
+            container.addEventListener('touchend', resetSlider);
+
+            return div;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 800) fetchImages();
+        });
+
+        fetchImages();
+    </script>
+</body>
+
+</html>

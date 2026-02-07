@@ -1,0 +1,323 @@
+{
+    "images": [
+        {
+            "src_after": "Thumbnail/pfm/Dubai.webp",
+            "src_before": "Thumbnail/pfm/DubaiB.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/pfm/Income.webp",
+            "src_before": "Thumbnail/pfm/Incomeb.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/pfm/Japan.webp",
+            "src_before": "Thumbnail/pfm/JapanB.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/finance.webp",
+            "src_before": "Thumbnail/financeB.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+        {
+            "src_after": "Thumbnail/pfm/India.webp",
+            "src_before": "Thumbnail/pfm/IndiaB.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/pfm/Nahid-rana.webp",
+            "src_before": "Thumbnail/pfm/Nahid-ranab.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/travel3.webp",
+            "src_before": "Thumbnail/travel3b.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+       
+        {
+            "src_after": "Thumbnail/podcast2.webp",
+            "src_before": "Thumbnail/podcast2B.webp",
+            "alt_after": "others after",
+            "alt_before": "others before",
+            "category": "others"
+        },
+        {
+            "src_after": "Thumbnail/travel1.webp",
+            "src_before": "Thumbnail/travel1B.webp",
+            "alt_after": "travel after",
+            "alt_before": "travel before",
+            "category": "travel"
+        },
+        {
+            "src_after": "Thumbnail/tech1.webp",
+            "src_before": "Thumbnail/tech1B.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+        {
+            "src_after": "Thumbnail/travel2.webp",
+            "src_before": "Thumbnail/travel2B.webp",
+            "alt_after": "travel after",
+            "alt_before": "travel before",
+            "category": "travel"
+        },
+        {
+            "src_after": "Thumbnail/ahsan/ah0.webp",
+            "src_before": "Thumbnail/ahsan/ah0-b.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+        {
+            "src_before": "Thumbnail/podcast1B.webp",
+            "src_after": "Thumbnail/podcast1.webp",
+            "alt_after": "others after",
+            "alt_before": "others before",
+            "category": "others"
+        },
+        {
+            "src_after": "Thumbnail/ahsan/ah3.webp",
+            "src_before": "Thumbnail/ahsan/ah3-b.webp",
+            "alt_after": "travel after",
+            "alt_before": "travel before",
+            "category": "travel"
+        },
+        
+        {
+            "src_after": "Thumbnail/ahsan/ah5.webp",
+            "src_before": "Thumbnail/ahsan/ah5-b.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+        {
+            "src_after": "Thumbnail/pfm/doc1.webp",
+            "src_before": "Thumbnail/pfm/doc1B.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/ahsan/ah6.webp",
+            "src_before": "Thumbnail/ahsan/ah6-b.webp",
+            "alt_after": "others after",
+            "alt_before": "others before",
+            "category": "others"
+        },
+        {
+            "src_after": "Thumbnail/ahsan/ah7.webp",
+            "src_before": "Thumbnail/ahsan/ah7-b.webp",
+            "alt_after": "others after",
+            "alt_before": "others before",
+            "category": "others"
+        },
+        {
+            "src_after": "Thumbnail/pfm/doc2.webp",
+            "src_before": "Thumbnail/pfm/doc2B.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/ahsan/ah1.webp",
+            "src_before": "Thumbnail/ahsan/ah1-b.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+        {
+            "src_after": "Thumbnail/pfm/doc3.webp",
+            "src_before": "Thumbnail/pfm/doc3B.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/pfm/doc4.webp",
+            "src_before": "Thumbnail/pfm/doc4B.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/ahsan/ah8.webp",
+            "src_before": "Thumbnail/ahsan/ah8-b.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+
+        {
+            "src_after": "Thumbnail/s24/s2.webp",
+            "src_before": "Thumbnail/s24/s2-b.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+        {
+            "src_after": "Thumbnail/pfm/football/zidane.webp",
+            "src_before": "Thumbnail/pfm/football/zidane_b.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/pfm/doc5.webp",
+            "src_before": "Thumbnail/pfm/doc5B.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/pfm/football/zalatan.webp",
+            "src_before": "Thumbnail/pfm/football/zalatan_b.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/pfm/football/Sadio-Mane.webp",
+            "src_before": "Thumbnail/pfm/football/Sadio-Mane_b.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/fk3.webp",
+            "src_before": "Thumbnail/fk3-b.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+        {
+            "src_after": "Thumbnail/s24/s9.webp",
+            "src_before": "Thumbnail/s24/s9-b.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+        {
+            "src_after": "Thumbnail/bundarban.webp",
+            "src_before": "Thumbnail/bundarbanB.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+     
+        {
+            "src_after": "Thumbnail/s24/s4.webp",
+            "src_before": "Thumbnail/s24/s4-b.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+        {
+            "src_after": "Thumbnail/pfm/football/moSalah.webp",
+            "src_before": "Thumbnail/pfm/football/moSalah_b.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/pfm/football/meradona.webp",
+            "src_before": "Thumbnail/pfm/football/meradona_b.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/fk2.webp",
+            "src_before": "Thumbnail/fk2-b.webp",
+            "alt_after": "others after",
+            "alt_before": "others before",
+            "category": "others"
+        },
+        {
+            "src_after": "Thumbnail/pfm/football/mbappe.webp",
+            "src_before": "Thumbnail/pfm/football/mbappe_b.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/pfm/cricket1.webp",
+            "src_before": "Thumbnail/pfm/cricket1B.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/s24/s5.webp",
+            "src_before": "Thumbnail/s24/s5-b.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+        {
+            "src_after": "Thumbnail/pfm/football/Leo-Messi.webp",
+            "src_before": "Thumbnail/pfm/football/Leo-Messi_b.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/ahsan/ahP.webp",
+            "src_before": "Thumbnail/ahsan/ahP-b.webp",
+            "alt_after": "others after",
+            "alt_before": "others before",
+            "category": "others"
+        },
+        {
+            "src_after": "Thumbnail/fk1.webp",
+            "src_before": "Thumbnail/fk1-b.webp",
+            "alt_after": "travel after",
+            "alt_before": "travel before",
+            "category": "travel"
+        },
+        {
+            "src_after": "Thumbnail/pfm/football/beckham.webp",
+            "src_before": "Thumbnail/pfm/football/beckham_b.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/pfm/football/kaka.webp",
+            "src_before": "Thumbnail/pfm/football/kaka_b.webp",
+            "alt_after": "documentary after",
+            "alt_before": "documentary before",
+            "category": "documentary"
+        },
+        {
+            "src_after": "Thumbnail/tech2.webp",
+            "src_before": "Thumbnail/tech2B.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        },
+        {
+            "src_after": "Thumbnail/s24/s10.webp",
+            "src_before": "Thumbnail/s24/s11.webp",
+            "alt_after": "informative after",
+            "alt_before": "informative before",
+            "category": "informative"
+        }
+    ]
+}
